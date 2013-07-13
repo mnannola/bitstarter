@@ -66,8 +66,8 @@ var checkHtmlFile = function(htmlfile, checksfile, urlData){
 };
 
 var checkUrl = function(checksfile, url){
-    rest.get(url).on('complete', function(response){
-	processResponse(response, checksfile);
+    rest.get(url).on('complete', function(result, response){
+	processResponse(result, response, checksfile);
     });
 };
 
@@ -77,10 +77,13 @@ var checkJson = function(json){
 };
 
 
-var processResponse = function(data, checksfile){
-    var str = data.toString();
-    console.log(str);
-    checkHtmlFile(null, checksfile, data);
+var processResponse = function(result, response, checksfile){
+    if(result instanceof Error){
+	console.log('Error: ' + response.message);
+	process.exit(1);
+    }
+
+    checkHtmlFile(null, checksfile, result);
 };
 
 var clone = function(fn){
