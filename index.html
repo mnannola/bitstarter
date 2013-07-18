@@ -11,8 +11,8 @@
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googlfeapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" 
 	  rel="styleheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600,700,800"
-	  rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700" rel="stylesheet"
+	  type="text/css">
     <style type="text/css">
       
       /* Large desktop */
@@ -45,7 +45,11 @@
       
       /* Main body and headings */
       body{
-	  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	  font-family: 'Vollkorn', serif;
+	  background-color: #878C91
+      }
+      #main{
+	  background-color:#fff;
       }
       .heading, .subheading{
 	  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
@@ -127,20 +131,20 @@
     <!-- We use raw-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-disigns-using-bootstrap/ -->
     <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
+    <div class="container" id="main">
       <!-- Font and paired font of .heading/.subheading and body from Google Fonts -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
 	<div class="span12">
-	  <h1>Product</h1>
+	  <h1>Ultimate Game Tracker</h1>
 	</div>
       </div>
       <div class="row-fluid subheading">
 	<div class="span12">
 	  <!-- Special typography from Bootstrap for lead paragraph. -->
 	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-	  <p class="lead">One sentence desctription.</p>
+	  <p class="lead">Keep track of your entire catelog of PC games.</p>
 	</div>
       </div>
       <div class="row-fluid pitch">
